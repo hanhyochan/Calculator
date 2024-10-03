@@ -10,7 +10,7 @@ let output_num = [0];
 let firstOperand = "";
 let operator = "";
 let secondOperand = "";
-let operatorChecked = false;
+let operatorChecked = false;fffffff
 
 display_num.textContent = output_num.join('');
 
