@@ -9,11 +9,11 @@ onoff_btn.addEventListener("click", (e) => {
   onoff = !onoff;
   if (onoff) {
     display = "";
-    return display_input.textContent = display;
+    return (display_input.textContent = display);
   } else {
     display = "0";
-    let firstOperand = display;
     display_input.textContent = display;
+    let firstOperand = display;
     let operator = null;
     let secondOperand = null;
     let reset = false;
@@ -60,7 +60,7 @@ onoff_btn.addEventListener("click", (e) => {
         display = "";
         display += e.target.textContent;
         reset = false;
-      } else if (display.includes(".") || display !== "0") {
+      } else if (display.includes(".")) {
         display += e.target.textContent;
       } else {
         display += e.target.textContent;
@@ -108,7 +108,7 @@ onoff_btn.addEventListener("click", (e) => {
       if (result.isInteger === true) {
         return Number(result);
       } else {
-        return Number(result.toFixed(5));
+        return Number(result.toFixed(11));
       }
     }
 
@@ -128,7 +128,10 @@ onoff_btn.addEventListener("click", (e) => {
 
     // dot 눌렀을 때
     const click_dot = () => {
-      if (display.includes(".") === false) {
+      if (reset) {
+        display = "0.";
+        reset = false;
+      } else if (!display.includes(".")) {
         display += ".";
       }
       display_input.textContent = display;
