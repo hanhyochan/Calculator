@@ -60,8 +60,6 @@ onoff_btn.addEventListener("click", (e) => {
         display = "";
         display += e.target.textContent;
         reset = false;
-      } else if (display.includes(".")) {
-        display += e.target.textContent;
       } else {
         display += e.target.textContent;
       }
