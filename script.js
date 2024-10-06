@@ -56,7 +56,7 @@ onoff_btn.addEventListener("click", (e) => {
 
     // 숫자 눌렀을 때
     const click_num = (e) => {
-      if ((Number(display) === 0 && display.length === 1) || reset) {
+      if ((display === "0" && display.length === 1) || reset) {
         display = "";
         display += e.target.textContent;
         reset = false;
