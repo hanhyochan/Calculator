@@ -103,11 +103,7 @@ onoff_btn.addEventListener("click", (e) => {
           result = firstOperand + secondOperand;
           break;
       }
-      if (result.isInteger === true) {
-        return Number(result);
-      } else {
-        return Number(result.toFixed(11));
-      }
+      return String(Number(result.toFixed(11))); // 소수일 경우
     }
 
     // 기능 눌렀을 때
